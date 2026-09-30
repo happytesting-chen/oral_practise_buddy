@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xiao Wei Oral Practice Buddy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">P4 English Oral Practice</p>
+        <h1>Xiao Wei's Oral Practice Buddy</h1>
+        <p class="subtitle">Speak first. Get a small hint. Build a stronger answer with SEPS.</p>
+      </div>
+      <button id="parentModeBtn" class="ghost-btn" type="button">Parent Mode</button>
+    </header>
+
+    <section id="homeView" class="view active">
+      <div class="hero-card">
+        <div>
+          <span class="pill">SEPS</span>
+          <h2>State → Explain → Personal Experience → Suggestion</h2>
+          <p>The coach will not show the full answer at the start. Xiao Wei speaks first, then gets gentle guidance one step at a time.</p>
+        </div>
+        <div class="seps-grid" aria-label="SEPS framework">
+          <div class="seps-card"><strong>S</strong><span>State</span></div>
+          <div class="seps-card"><strong>E</strong><span>Explain</span></div>
+          <div class="seps-card"><strong>P</strong><span>Personal Experience</span></div>
+          <div class="seps-card"><strong>S</strong><span>Suggestion</span></div>
+        </div>
+      </div>
+
+      <h2 class="section-title">Choose a topic</h2>
+      <div id="topicGrid" class="topic-grid"></div>
+    </section>
+
+    <section id="practiceView" class="view">
+      <div class="practice-header">
+        <button id="backBtn" class="ghost-btn" type="button">← Topics</button>
+        <div>
+          <span id="topicBadge" class="pill"></span>
+          <h2 id="topicTitle"></h2>
+        </div>
+        <div id="questionCounter" class="question-counter"></div>
+      </div>
+
+      <div class="practice-layout">
+        <aside class="stimulus-card">
+          <div id="stimulusEmoji" class="stimulus-emoji" aria-hidden="true"></div>
+          <h3>Look at the stimulus</h3>
+          <p id="stimulusText"></p>
+          <div id="stimulusActions" class="stimulus-actions"></div>
+        </aside>
+
+        <section class="coach-card">
+          <p class="eyebrow">Oral Question</p>
+          <h2 id="questionText"></h2>
+
+          <div class="coach-message" id="coachMessage">
+            <div class="coach-avatar">🎧</div>
+            <div>
+              <strong>Coach</strong>
+              <p id="coachText">Think for a few seconds, then answer in your own words.</p>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="speakBtn" class="primary-btn" type="button">🎤 Start Speaking</button>
+            <button id="stuckBtn" class="secondary-btn" type="button">💡 I'm Stuck</button>
+          </div>
+
+          <div class="transcript-card">
+            <div class="transcript-heading">
+              <strong>Your answer</strong>
+              <span id="listeningStatus"></span>
+            </div>
+            <textarea id="transcript" rows="7" placeholder="Your spoken words will appear here. You can also type if speech recognition is unavailable."></textarea>
+          </div>
+
+          <div class="seps-progress">
+            <div class="progress-label"><span>SEPS progress</span><span id="progressSummary">0 / 4</span></div>
+            <div class="progress-steps">
+              <button class="progress-step" data-step="state" type="button">S <small>State</small></button>
+              <button class="progress-step" data-step="explain" type="button">E <small>Explain</small></button>
+              <button class="progress-step" data-step="personal" type="button">P <small>Experience</small></button>
+              <button class="progress-step" data-step="suggestion" type="button">S <small>Suggestion</small></button>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button id="checkBtn" class="primary-btn" type="button">Guide My Answer</button>
+            <button id="clearBtn" class="ghost-btn" type="button">Clear</button>
+          </div>
+
+          <div id="feedbackPanel" class="feedback-panel hidden"></div>
+
+          <div class="question-nav">
+            <button id="prevQuestionBtn" class="ghost-btn" type="button">← Previous</button>
+            <button id="nextQuestionBtn" class="secondary-btn" type="button">Next Question →</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <dialog id="parentDialog" class="parent-dialog">
+      <form method="dialog">
+        <div class="dialog-header">
+          <div>
+            <p class="eyebrow">Parent Mode</p>
+            <h2>Suggested coaching notes</h2>
+          </div>
+          <button class="ghost-btn" value="close">Close</button>
+        </div>
+        <p class="parent-note">These are for the parent. Let Xiao Wei attempt the question before opening this section.</p>
+        <div id="parentContent"></div>
+      </form>
+    </dialog>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
