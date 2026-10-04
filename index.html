@@ -6,9 +6,22 @@
 <h2 class="section-title">1. Choose your practice type</h2>
 <div class="mode-grid">
 <button class="mode-card" data-mode="qa"><span class="mode-icon">💬</span><span class="mode-tag">NO PICTURE</span><h2>Questions & Answers</h2><p>Listen to a question and answer it directly. Build your answer with SEPS.</p><strong>Choose Q&A →</strong></button>
-<button class="mode-card" data-mode="stimulus"><span class="mode-icon">🖼️</span><span class="mode-tag">WITH STIMULUS</span><h2>Stimulus-Based Conversation</h2><p>Look carefully first. Refer to what you see, then develop your answer with SEPS.</p><strong>Choose Stimulus →</strong></button>
+<button class="mode-card" data-mode="stimulus"><span class="mode-icon">🖼️</span><span class="mode-tag">WITH STIMULUS</span><h2>Stimulus-Based Conversation</h2><p>Look carefully first. Refer to what you see, then develop your answer with SEPS.</p><strong>Choose Stimulus →</strong></button><button class="mode-card" data-mode="learn"><span class="mode-icon">📚</span><span class="mode-tag">BUILD YOUR ORAL BANK</span><h2>Learn & Build</h2><p>Learn useful words, reusable sentences and everyday examples before speaking.</p><strong>Start Learning →</strong></button>
 </div>
 <div id="topicChooser" class="hidden"><div class="chooser-heading"><div><p class="eyebrow" id="chosenModeLabel"></p><h2>2. Choose a topic</h2></div><button id="changeModeBtn" class="ghost-btn">Change practice type</button></div><div id="topicGrid" class="topic-grid"></div></div>
+</section>
+
+<section id="learnView" class="view">
+<div class="practice-header"><button id="learnBackBtn" class="ghost-btn">← Topics</button><div><span class="pill">📚 LEARN & BUILD</span> <span id="learnTopicBadge" class="pill"></span><h2 id="learnTitle">Build My Oral Bank</h2></div></div>
+<div class="learn-intro"><strong>How to use this page:</strong> Read the words and sentences aloud. Choose one real experience you can talk about. You do not need to memorise everything.</div>
+<div class="learn-grid">
+<section class="learn-card"><h3>🧠 Useful Vocabulary</h3><div id="learnVocab" class="vocab-grid"></div></section>
+<section class="learn-card"><h3>💬 Useful Sentences</h3><div id="learnSentences"></div></section>
+<section class="learn-card"><h3>🌟 Possible Experiences</h3><div id="learnExperiences"></div></section>
+<section class="learn-card"><h3>🔑 Idea to Remember</h3><p id="learnIdea"></p><div class="example-box"><strong>P4 Speaking Example</strong><p id="learnExample"></p></div></section>
+</div>
+<div class="universal-bank"><h3>🔄 Sentences I Can Use in Many Topics</h3><div id="universalSentences"></div></div>
+<div class="learn-actions"><button id="learnQaBtn" class="secondary-btn">Practise Q&A →</button><button id="learnStimBtn" class="primary-btn">Practise With Stimulus →</button></div>
 </section>
 
 <section id="practiceView" class="view">
