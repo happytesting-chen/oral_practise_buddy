@@ -18,3 +18,6 @@
 .learn-section-note{margin:-4px 0 14px;color:var(--muted);line-height:1.5}
 .explain-line{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;margin:7px 0;border-radius:10px;background:#f8f9ff;line-height:1.45}
 .why-badge{flex:0 0 auto;font-size:.68rem;font-weight:850;letter-spacing:.06em;color:var(--accent);background:var(--accent-soft);padding:4px 7px;border-radius:999px;margin-top:1px}
+
+.suggest-line{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;margin:7px 0;border-radius:10px;background:#f8f9ff;line-height:1.45}
+.suggest-badge{flex:0 0 auto;font-size:.68rem;font-weight:850;letter-spacing:.06em;color:var(--accent);background:var(--accent-soft);padding:4px 7px;border-radius:999px;margin-top:1px}
